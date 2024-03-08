@@ -21,6 +21,14 @@ class Api::V1::ProductsController < ApplicationController
       render json: { error: 'Failed to create product data' }, status: :unprocessable_entity
     end
   end
+
+  def update
+    if @product.update(product_params)
+      render json: @product, status: :ok
+    else
+      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
   
   private
 
