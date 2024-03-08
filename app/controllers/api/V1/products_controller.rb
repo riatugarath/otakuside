@@ -13,5 +13,18 @@ class Api::V1::ProductsController < ApplicationController
     end
   end
 
+  def create
+    @product = Product.new(product_params)
+    if @product.save
+      render json: @product, status: :created
+    else
+      render json: { error: 'Failed to create product data' }, status: :unprocessable_entity
+    end
+  end
   
+  private
+
+  def product_params
+    params.require(:product).permit(:name, :image, :category, :price, :description)
+  end
 end
