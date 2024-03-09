@@ -1,0 +1,10 @@
+2024-03-09 07:04:22.255 -05 [1058] LOG:  starting PostgreSQL 14.10 (Homebrew) on x86_64-apple-darwin17.7.0, compiled by Apple LLVM version 10.0.0 (clang-1000.10.44.4), 64-bit
+2024-03-09 07:04:22.257 -05 [1058] LOG:  listening on IPv6 address "::1", port 5432
+2024-03-09 07:04:22.257 -05 [1058] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-03-09 07:04:22.258 -05 [1058] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-03-09 07:04:22.883 -05 [1059] LOG:  database system was interrupted; last known up at 2024-01-17 22:09:25 -05
+2024-03-09 07:04:24.708 -05 [1059] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-03-09 07:04:24.828 -05 [1059] LOG:  redo starts at 0/23F18F8
+2024-03-09 07:04:24.828 -05 [1059] LOG:  invalid record length at 0/23F19E0: wanted 24, got 0
+2024-03-09 07:04:24.828 -05 [1059] LOG:  redo done at 0/23F19A8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-03-09 07:04:24.996 -05 [1058] LOG:  database system is ready to accept connections
