@@ -9,6 +9,17 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+
+  # Define the root path route ("/")
+  devise_scope :user do
+    authenticated :user do
+      root to: 'dashboard#index', as: :authenticated_root
+    end
+
+    unauthenticated do
+      root to: 'dashboard#index', as: :unauthenticated_root
+    end
+  end
   
   namespace :api do
     namespace :v1 do
