@@ -14,5 +14,25 @@ class Api::V1::CartsController < ApplicationController
     render json: @cart
   end
 
+  # POST /carts
+  def create
+    @cart = Cart.new(cart_params)
+    if @cart.save
+      render json: @cart, status: :created
+    else
+      render json: { errors: @cart.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
   
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cart
+    @cart = Cart.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def cart_params
+    params.require(:cart).permit(:quantity, :user_id, :product_id)
+  end
 end
