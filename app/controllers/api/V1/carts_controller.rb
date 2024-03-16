@@ -23,7 +23,24 @@ class Api::V1::CartsController < ApplicationController
       render json: { errors: @cart.errors.full_messages }, status: :unprocessable_entity
     end
   end
-  
+
+  # PATCH/PUT /carts/1
+  def update
+    if @cart.update(cart_params)
+      render json: @cart
+    else
+      render json: @cart.errors, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    if @cart.destroy
+      head :no_content
+    else
+      render json: { errors: @cart.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
