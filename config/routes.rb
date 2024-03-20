@@ -13,11 +13,11 @@ Rails.application.routes.draw do
   # Define the root path route ("/")
   devise_scope :user do
     authenticated :user do
-      root to: 'dashboard#index', as: :authenticated_root
+      root to: 'users/registrations#new', as: :authenticated_root
     end
 
     unauthenticated do
-      root to: 'dashboard#index', as: :unauthenticated_root
+      root to: 'users/registrations#new', as: :unauthenticated_root
     end
   end
 

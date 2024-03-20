@@ -8,3 +8,4 @@
 2024-03-09 07:04:24.828 -05 [1059] LOG:  invalid record length at 0/23F19E0: wanted 24, got 0
 2024-03-09 07:04:24.828 -05 [1059] LOG:  redo done at 0/23F19A8 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
 2024-03-09 07:04:24.996 -05 [1058] LOG:  database system is ready to accept connections
+2024-03-19 13:38:45.060 -05 [1063] LOG:  using stale statistics instead of current ones because stats collector is not responding
