@@ -21,7 +21,24 @@ class Api::V1::LandingsController < ApplicationController
       render json: { error: 'Failed to create landing data' }, status: :unprocessable_entity
     end
   end
-  
+
+  def update
+    if @landing.update(landing_params)
+      render json: @landing, status: :ok
+    else
+      render json: { errors: @landing.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @landing = Landing.find(params[:id])
+    if @landing.update(is_removed: true)
+      render json: @landing
+    else
+      render json: { errors: @landing.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def product_params
