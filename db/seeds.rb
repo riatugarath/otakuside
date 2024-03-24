@@ -27,17 +27,18 @@ Landing.create([
 ])
 
 Product.create([
-    {name: "Dr. Stone White Medium Size Cup", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709336758/devSources/carouselAnime1_syz7dy.png", category: "Cups", price: 35, description: "" },
-    {name: "Dr. Stone Beige Small Size Cup", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711119875/devSources/carouselMune_mswdho.png", category: "Cups", price: 35, description: "" },
-    {name: "Yu-Gi-Oh anime offer", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711119875/devSources/carouselMune_mswdho.png", category: "Doll", price: 35, description: "" },
-    {name: "DBZ Goku on a Pedestal Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711217030/devSources/tshirtOffer_fwppku.png", category: "Doll", price: 25, description: "" },
-    {name: "Tyranitar Pokemon Small Size Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709248312/devSources/animes_otaku_kly2au.png", category: "Doll", price: 35, description: "" },
-    {name: "Milotic Pokemon Small Size Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709247720/devSources/clothes_otaku_wnygyv.png", category: "Doll", price: 35, description: "" },
-    {name: "Yu Yu Hakusho Yusuke Urameshi Samll Size Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709247953/devSources/games_otaku_wpsrsa.png", category: "Doll", price: 35, description: "" },
-    {name: "Pokemon Trading Card Game", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709248201/devSources/dolls_otaku_xxgnje.png", category: "Games", price: 35, description: "" },
-    {name: "Yu-Gi-Oh Trading Card Game", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709248515/devSources/cups_otaku_qiwniq.png", category: "Games", price: 35, description: "" },
-    {name: 'Dr. Stone T-Shirt for Women', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1708104077/devSources/arrivalTshirt_ttnqu4.png', category: "Clothes", price: 35, description: ""},
-    {name: 'Naruto Red Pullover Medium Size for Men', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711217499/devSources/naruPullArrivals_y50vbx.png', category: "Clothes", price: 35, description: ""},
-    {name: 'Roshi Black Pullover Medium Size for Men', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711217532/devSources/drStonBeiCupArrivals_phxdzp.png', category: "Clothes", price: 35, description: ""},
-    {name: 'One Piece 57th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1708104077/devSources/arrivalTshirt_ttnqu4.png', category: "Animes", price: 8, description: ""}
+    {name: "Dr. Stone White Medium Size Cup", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709336758/devSources/carouselAnime1_syz7dy.png", category: "Cups", price: 11.00, description: "" },
+    {name: "Dr. Stone Beige Small Size Cup", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711119875/devSources/carouselMune_mswdho.png", category: "Cups", price: 10.90, description: "" },
+    {name: "Yu-Gi-Oh anime offer", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711119875/devSources/carouselMune_mswdho.png", category: "Doll", price: 12.90, description: "" },
+    {name: "DBZ Goku on a Pedestal Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711217030/devSources/tshirtOffer_fwppku.png", category: "Doll", price: 11.90, description: "" },
+    {name: "Tyranitar Pokemon Small Size Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709248312/devSources/animes_otaku_kly2au.png", category: "Doll", price: 13.90, description: "" },
+    {name: "Milotic Pokemon Small Size Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709247720/devSources/clothes_otaku_wnygyv.png", category: "Doll", price: 13.50, description: "" },
+    {name: "Yu Yu Hakusho Yusuke Urameshi Small Size Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711217610/devSources/YuYuHakuDollArrivals_sshlyu.png", category: "Doll", price: 14.00, description: "" },
+    {name: "Pokemon Trading Card Game", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711288748/devSources/pokeTradingCarGameStore_ouh6qw.png", category: "Games", price: 19.50, description: "" },
+    {name: "Yu-Gi-Oh Trading Card Game", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711288796/devSources/YuGOhGameStore_k462it.png", category: "Games", price: 15.90, description: "" },
+    {name: 'Dr. Stone T-Shirt for Women', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1708104077/devSources/arrivalTshirt_ttnqu4.png', category: "Clothes", price: 25.90, description: ""},
+    {name: 'Naruto Red Pullover Medium Size for Men', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711217499/devSources/naruPullArrivals_y50vbx.png', category: "Clothes", price: 40.90, description: ""},
+    {name: 'Roshi Black Pullover Medium Size for Men', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711288928/devSources/pullBlacOvDBStore_q7iasw.png', category: "Clothes", price: 50.90, description: ""},
+    {name: 'One Piece 57th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289009/devSources/onePie57AnimeStore_numpst.png', category: "Animes", price: 8.00, description: ""},
+    {name: 'Yu-Gi-Oh 38th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289009/devSources/onePie57AnimeStore_numpst.png', category: "Animes", price: 7.00, description: ""}
 ])
