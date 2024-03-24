@@ -32,11 +32,7 @@ class Api::V1::ProductsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:id])
-    if @product.update(is_removed: true)
-      render json: @product
-    else
-      render json: { errors: @product.errors.full_messages }, status: :unprocessable_entity
-    end
+    render json: @product
   end
 
   private

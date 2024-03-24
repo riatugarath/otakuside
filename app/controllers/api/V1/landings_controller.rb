@@ -32,16 +32,12 @@ class Api::V1::LandingsController < ApplicationController
 
   def destroy
     @landing = Landing.find(params[:id])
-    if @landing.update(is_removed: true)
-      render json: @landing
-    else
-      render json: { errors: @landing.errors.full_messages }, status: :unprocessable_entity
-    end
+    render json: @landing
   end
 
   private
 
   def product_params
-    params.require(:landing).permit(:name, :image, :category, :offer)
+    params.require(:landing).permit(:name, :image, :category)
   end
 end
