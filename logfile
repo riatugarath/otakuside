@@ -23,3 +23,4 @@
 2024-03-24 13:39:33.289 -05 [49034] STATEMENT:  DROP DATABASE IF EXISTS "otakukaio_development"
 2024-03-24 13:52:55.870 -05 [49470] FATAL:  database "otakukaio_development" does not exist
 2024-03-24 13:52:56.992 -05 [49472] FATAL:  database "otakukaio_development" does not exist
+2024-03-28 06:40:12.595 -05 [1063] LOG:  using stale statistics instead of current ones because stats collector is not responding
