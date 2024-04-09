@@ -29,18 +29,21 @@ Landing.create([
 ]);
 
 Product.create([
-    {name: "Dr. Stone White Medium Size Cup", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709336758/devSources/carouselAnime1_syz7dy.png", category: "Cups", ori_price: 20.95, sale_price: 15.90, description: "-" },
-    {name: "Dr. Stone Beige Small Size Cup", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711119875/devSources/carouselMune_mswdho.png", category: "Cups", ori_price: 22.90, sale_price: 17.59, description: "-" },
-    {name: "Yu-Gi-Oh anime offer", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711119875/devSources/carouselMune_mswdho.png", category: "Doll", ori_price: 9.90, sale_price: 6.90, description: "-" },
-    {name: "DBZ Goku on a Pedestal Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711217030/devSources/tshirtOffer_fwppku.png", category: "Doll", ori_price: 10.99, sale_price: 7.99, description: "-" },
-    {name: "Tyranitar Pokemon Small Size Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709248312/devSources/animes_otaku_kly2au.png", category: "Doll", ori_price: 14.89, sale_price: 10.59, description: "-" },
-    {name: "Milotic Pokemon Small Size Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1709247720/devSources/clothes_otaku_wnygyv.png", category: "Doll", ori_price: 16.90, sale_price: 13.29, description: "-" },
-    {name: "Yu Yu Hakusho Yusuke Urameshi Small Size Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711217610/devSources/YuYuHakuDollArrivals_sshlyu.png", category: "Doll", ori_price: 16.99, sale_price: 12.59, description: "-" },
+    {name: "Dr. Stone White Cup", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1712691767/devSources/cupDrStoneWhiStoe_uhlfwh.png", category: "Cups", ori_price: 20.95, sale_price: 15.90, description: "-" },
+    {name: "Dr. Stone Beige Cup", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1712692297/devSources/mugbeigSmalDrStonStor_tednky.png", category: "Cups", ori_price: 18.90, sale_price: 14.50, description: "-" },
+    {name: "Natuto white Cup", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1712699990/devSources/cupNaruMediWhiStor_s3agse.png", category: "Cups", ori_price: 19.99, sale_price: 14.99, description: "-" },
+    {name: "Articuno Pokemon Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1712700242/devSources/articunoDollStore_y4ol7f.png", category: "Doll", ori_price: 9.90, sale_price: 6.90, description: "-" },
+    {name: "DBZ Goku on a Pedestal Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1712700377/devSources/goku1DBZDollStore_pjhpoa.png", category: "Doll", ori_price: 10.99, sale_price: 7.99, description: "-" },
+    {name: "Tyranitar Pokemon Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1712700422/devSources/tyraDollStore_ojlamk.png", category: "Doll", ori_price: 13.89, sale_price: 9.59, description: "-" },
+    {name: "Milotic Pokemon Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1712700492/devSources/miloticDollStore_oyivw9.png", category: "Doll", ori_price: 15.90, sale_price: 11.50, description: "-" },
+    {name: "Yu Yu Hakusho Yusuke Urameshi Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1712700538/devSources/YuYuHakuUrameDollStore_snjbb8.png", category: "Doll", ori_price: 16.99, sale_price: 12.59, description: "-" },
     {name: "Pokemon Trading Card Game", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711288748/devSources/pokeTradingCarGameStore_ouh6qw.png", category: "Games", ori_price: 23.50, sale_price: 17.50, description: "-" },
     {name: "Yu-Gi-Oh Trading Card Game", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1711288796/devSources/YuGOhGameStore_k462it.png", category: "Games", ori_price: 20.90, sale_price: 15.90, description: "-" },
     {name: 'Dr. Stone T-Shirt for Women', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1708104077/devSources/arrivalTshirt_ttnqu4.png', category: "Clothes", ori_price: 22.90, sale_price: 16.90, description: "-"},
     {name: 'Naruto Red Pullover Medium Size for Men', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711217499/devSources/naruPullArrivals_y50vbx.png', category: "Clothes", ori_price: 59.9, sale_price: 40.90, description: "-"},
-    {name: 'Roshi Black Pullover Medium Size for Men', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711288928/devSources/pullBlacOvDBStore_q7iasw.png', category: "Clothes", ori_price: 70.9, sale_price: 50.9, description: "-"},
-    {name: 'One Piece 57th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289009/devSources/onePie57AnimeStore_numpst.png', category: "Animes", ori_price: 8.50, sale_price: 5.50, description: "-"},
-    {name: 'Yu-Gi-Oh 38th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289009/devSources/onePie57AnimeStore_numpst.png', category: "Animes", ori_price: 8.50, sale_price: 5.50, description: "-"}
+    {name: 'Roshi Black Pullover Medium Size for Men', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711288928/devSources/pullBlacOvDBStore_q7iasw.png', category: "Clothes", ori_price: 70.99, sale_price: 50.90, description: "-"},
+    {name: 'Dr. Stone White Pullover', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1712689988/devSources/whitWomenPullDrSton_n1cc1z.png', category: "Clothes", ori_price: 79.90, sale_price: 59.99, description: "-"},
+    {name: 'One Piece 57th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289009/devSources/onePie57AnimeStore_numpst.png', category: "Animes", ori_price: 9.50, sale_price: 6.50, description: "-"},
+    {name: 'Hunter x Hunter 37th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1712690899/devSources/hunxHunAnimStore_zjajt7.png', category: "Animes", ori_price: 9.99, sale_price: 6.99, description: "-"},
+    {name: 'Yu-Gi-Oh 38th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289138/devSources/yugiOhAnimeStore_z3rs0c.png', category: "Animes", ori_price: 8.50, sale_price: 5.50, description: "-"}
 ]);
