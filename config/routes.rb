@@ -21,6 +21,11 @@ Rails.application.routes.draw do
     end
   end
 
+  # Add a route for user registration
+  devise_scope :user do
+    post 'auth/signup', to: 'users/registrations#create'
+  end
+  
   namespace :api do
     namespace :v1 do
       resources :products, only: [:index, :show, :create, :destroy]
