@@ -49,5 +49,6 @@ Product.create([
     {name: 'Neon Genesis Evangelion Pullover', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1714149092/devSources/pullPurpEvangeStor_rik30p.png', category: "Clothes", ori_price: 67.99, sale_price: 49.99, color:"Purple", description: "-"},
     {name: 'One Piece 57th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289009/devSources/onePie57AnimeStore_numpst.png', category: "Animes", ori_price: 9.50, sale_price: 6.50, description: "-"},
     {name: 'Hunter x Hunter 37th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1712690899/devSources/hunxHunAnimStore_zjajt7.png', category: "Animes", ori_price: 9.99, sale_price: 6.99, description: "-"},
+    {name: 'Full Metal Alchemist 27th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1714490281/devSources/fullMetVol27AniStor_hikfty.png', category: "Animes", ori_price: 11.99, sale_price: 8.99, description: "-"},
     {name: 'Yu-Gi-Oh 38th Volume Anime', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289138/devSources/yugiOhAnimeStore_z3rs0c.png', category: "Animes", ori_price: 8.50, sale_price: 5.50, description: "-"}
 ]);
