@@ -35,3 +35,4 @@
 2024-05-01 19:11:27.972 -05 [1063] LOG:  using stale statistics instead of current ones because stats collector is not responding
 2024-05-02 09:59:46.488 -05 [1063] LOG:  using stale statistics instead of current ones because stats collector is not responding
 2024-05-02 10:00:39.077 -05 [21906] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2024-05-03 08:01:19.955 -05 [23708] LOG:  using stale statistics instead of current ones because stats collector is not responding
