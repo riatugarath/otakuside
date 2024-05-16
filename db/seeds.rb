@@ -67,5 +67,6 @@ Product.create([
     {name: 'Full Metal Alchemist 27th Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1714490281/devSources/fullMetVol27AniStor_hikfty.png', category: "Animes", ori_price: 11.99, sale_price: 8.99, description: "-"},
     {name: 'Gintama 75th Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1714575120/devSources/gintamVol75AniStor_us4e0t.png', category: "Animes", ori_price: 12.59, sale_price: 8.99, description: "-"},
     {name: 'Shingeki no Kyojin 34th Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1715000992/devSources/ShingNoKyoj34VolAnimStor_g978qv.png', category: "Animes", ori_price: 13.90, sale_price: 9.90, description: "-"},
+    {name: 'Dr. Stone 27th Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1715899317/devSources/DrStonMangVolu27Stor_iysywa.png', category: "Animes", ori_price: 13.99, sale_price: 10.99, description: "-"},
     {name: 'Yu-Gi-Oh 38th Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289138/devSources/yugiOhAnimeStore_z3rs0c.png', category: "Animes", ori_price: 8.50, sale_price: 5.50, description: "-"}
 ]);
