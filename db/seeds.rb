@@ -78,5 +78,6 @@ Product.create([
     {name: 'Shingeki no Kyojin 34th Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1715000992/devSources/ShingNoKyoj34VolAnimStor_g978qv.png', category: "Animes", ori_price: 13.90, sale_price: 9.90, description: "-"},
     {name: 'Dr. Stone 27th Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1715899317/devSources/DrStonMangVolu27Stor_iysywa.png', category: "Animes", ori_price: 13.99, sale_price: 10.99, description: "-"},
     {name: 'Cowboy Bebop 3rd Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1716660105/devSources/cowBoyBeboMangVol3Stor_fvib7f.png', category: "Animes", ori_price: 11.99, sale_price: 8.99, description: "-"},
+    {name: 'Steins;Gate 3rd Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1716747755/devSources/SteiGateVol3MangStor_sdq4zl.png', category: "Animes", ori_price: 11.50, sale_price: 7.99, description: "-"},
     {name: 'Yu-Gi-Oh 38th Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289138/devSources/yugiOhAnimeStore_z3rs0c.png', category: "Animes", ori_price: 8.50, sale_price: 5.50, description: "-"}
 ]);
