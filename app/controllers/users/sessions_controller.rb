@@ -1,4 +1,5 @@
 class Users::SessionsController < Devise::SessionsController
+  include ActionController::Flash
   include RackSessionFix
   respond_to :json
 
