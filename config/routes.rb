@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :products, only: [:index, :show, :create, :destroy]
       resources :landings, only: [:index, :show, :create, :destroy]
+      resources :discounts, only: [:index, :show, :create, :destroy]
       resources :carts
     end
   end
