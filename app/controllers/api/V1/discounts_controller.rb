@@ -22,6 +22,19 @@ class Api::V1::DiscountsController < ApplicationController
     end
   end
   
+  def update
+    if @discount.update(discount_params)
+      render json: @discount, status: :ok
+    else
+      render json: { errors: @discount.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
+  
+  def destroy
+    @discount = Discount.find(params[:id])
+    render json: @discount
+  end
+  
   private
   
   def discount_params
