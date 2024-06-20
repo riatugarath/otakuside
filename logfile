@@ -37,3 +37,7 @@
 2024-05-02 10:00:39.077 -05 [21906] LOG:  using stale statistics instead of current ones because stats collector is not responding
 2024-05-03 08:01:19.955 -05 [23708] LOG:  using stale statistics instead of current ones because stats collector is not responding
 2024-05-03 10:14:55.624 -05 [1063] LOG:  using stale statistics instead of current ones because stats collector is not responding
+2024-06-19 23:12:58.523 -05 [4747] FATAL:  lock file "postmaster.pid" already exists
+2024-06-19 23:12:58.523 -05 [4747] HINT:  Is another postmaster (PID 488) running in data directory "/usr/local/var/postgres"?
+2024-06-19 23:19:13.595 -05 [4800] FATAL:  lock file "postmaster.pid" already exists
+2024-06-19 23:19:13.595 -05 [4800] HINT:  Is another postmaster (PID 488) running in data directory "/usr/local/var/postgres"?

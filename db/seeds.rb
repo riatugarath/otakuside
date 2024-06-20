@@ -88,3 +88,8 @@ Product.create([
     {name: 'Neo Genesis Evangelion 16th Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1717433735/devSources/neoGeneevangeMangVol14Stor_bzngxc.png', category: "Mangas", ori_price: 9.99, sale_price: 6.99, description: "-"},
     {name: 'Yu-Gi-Oh 38th Volume Manga', image: 'https://res.cloudinary.com/dv1mouzbi/image/upload/v1711289138/devSources/yugiOhAnimeStore_z3rs0c.png', category: "Mangas", ori_price: 8.50, sale_price: 5.50, description: "-"}
 ]);
+
+Discount.create([
+	{name: "Nico Robin One Piece Mug", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1718903862/devSources/OnePieRobinOragOfferPage_fhowut.png", current_price: 11.99, offer_price: 7.99, normal_price: 19.99, percentage: 15 },
+    {name: "Katsuya Jōnouchi Yu-Gi-Oh t-shirt ", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1718903892/devSources/YugiOGreeLigOffe_aeys3w.png", current_price: 21.99, offer_price: 17.99, normal_price: 29.99, percentage: 15 }
+]);
