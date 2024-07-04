@@ -90,8 +90,8 @@ Product.create([
 ]);
 
 Discount.create([
-	{name: "Nico Robin One Piece Mug", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1718903862/devSources/OnePieRobinOragOfferPage_fhowut.png", current_price: 11.99, offer_price: 7.99, normal_price: 19.99, percentage: 60 },
-    {name: "Killua Zolduyck Hunter x Hunter Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1719064703/devSources/KilluZolduHunteHuntDoll_gg0aou.png", current_price: 14.99, offer_price: 9.99, normal_price: 20.99, percentage: 53 },
-    {name: "Kurapika Hunter x Hunter Pullover", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1719065006/devSources/HuntexHunKurapikaPullovDisco_z7o9w7.png", current_price: 29.99, offer_price: 21.99, normal_price: 39.99, percentage: 27 },
-    {name: "Katsuya Jōnouchi Yu-Gi-Oh t-shirt ", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1718903892/devSources/YugiOGreeLigOffe_aeys3w.png", current_price: 21.99, offer_price: 17.99, normal_price: 29.99, percentage: 40 }
+	{name: "Nico Robin One Piece Mug", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1718903862/devSources/OnePieRobinOragOfferPage_fhowut.png", current_price: 11.99, offer_price: 7.99, normal_price: 19.99, percentage: 60, category: "Mugs" },
+    {name: "Killua Zolduyck Hunter x Hunter Doll", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1719064703/devSources/KilluZolduHunteHuntDoll_gg0aou.png", current_price: 14.99, offer_price: 9.99, normal_price: 20.99, percentage: 53, category: "Dolls" },
+    {name: "Kurapika Hunter x Hunter Pullover", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1719065006/devSources/HuntexHunKurapikaPullovDisco_z7o9w7.png", current_price: 29.99, offer_price: 21.99, normal_price: 39.99, percentage: 27, category: "Clothes" },
+    {name: "Katsuya Jōnouchi Yu-Gi-Oh t-shirt ", image: "https://res.cloudinary.com/dv1mouzbi/image/upload/v1718903892/devSources/YugiOGreeLigOffe_aeys3w.png", current_price: 21.99, offer_price: 17.99, normal_price: 29.99, percentage: 40, category: "Clothes" }
 ]);
