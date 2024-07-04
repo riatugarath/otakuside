@@ -5,4 +5,5 @@ class Discount < ApplicationRecord
   validates :percentage, numericality: { greater_than: 0 }
   validates :current_price, numericality: { greater_than: 0 }
   validates :image, presence: true, length: { minimum: 2 }
+  validates :category, presence: true, length: { minimum: 2 }
 end
