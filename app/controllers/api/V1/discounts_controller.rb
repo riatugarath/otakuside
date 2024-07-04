@@ -38,6 +38,6 @@ class Api::V1::DiscountsController < ApplicationController
   private
   
   def discount_params
-    params.require(:discount).permit(:name, :image, :current_price, :offer_price, :normal_price, :percentage)
+    params.require(:discount).permit(:name, :image, :current_price, :offer_price, :normal_price, :percentage, :category)
   end
 end
