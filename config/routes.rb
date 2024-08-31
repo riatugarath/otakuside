@@ -31,7 +31,7 @@ Rails.application.routes.draw do
       resources :products, only: [:index, :show, :create, :destroy]
       resources :landings, only: [:index, :show, :create, :destroy]
       resources :discounts, only: [:index, :show, :create, :destroy]
-      resources :carts
+      resources :carts, only: [:index, :create, :update, :destroy]
     end
   end
 
