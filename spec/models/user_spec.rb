@@ -11,4 +11,14 @@ RSpec.describe User, type: :model do
 
   # Association validation
   it { should have_many(:carts).dependent(:destroy) }
+
+  # Verify Devise modules
+  it 'includes Devise modules' do
+    expect(User.ancestors).to include(Devise::Models::DatabaseAuthenticatable)
+    expect(User.ancestors).to include(Devise::Models::Registerable)
+    expect(User.ancestors).to include(Devise::Models::Recoverable)
+    expect(User.ancestors).to include(Devise::Models::Rememberable)
+    expect(User.ancestors).to include(Devise::Models::Validatable)
+    expect(User.ancestors).to include(Devise::JWT::RevocationStrategies::JTIMatcher)
+  end
 end
