@@ -16,4 +16,8 @@ RSpec.describe Product, type: :model do
   it { should validate_length_of(:name).is_at_least(2) }
   it { should validate_length_of(:image).is_at_least(2) }
   it { should validate_length_of(:category).is_at_least(2) }
+
+  # numeric validations
+  it { should validate_numericality_of(:ori_price).is_greater_than(0) }
+  it { should validate_numericality_of(:sale_price).is_greater_than(0) }
 end
