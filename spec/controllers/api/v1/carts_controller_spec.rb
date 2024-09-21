@@ -19,4 +19,23 @@ RSpec.describe Api::V1::CartsController, type: :controller do
       expect(json_response.first['id']).to eq(cart.id)
     end
   end
+
+  describe "POST #create" do
+    it "creates a new cart for the user" do
+      expect {
+        post :create, params: { cart: { quantity: 2, user_id: user.id, product_id: product.id, size: 'M' } }
+      }.to change(Cart, :count).by(1)
+
+      expect(response).to have_http_status(:created)
+      json_response = JSON.parse(response.body)
+      expect(json_response['quantity']).to eq(2)
+    end
+
+    it "returns an error when creation fails" do
+      post :create, params: { cart: { quantity: nil, user_id: user.id, product_id: product.id, size: 'M' } }
+      expect(response).to have_http_status(:unprocessable_entity)
+      json_response = JSON.parse(response.body)
+      expect(json_response['errors']).to include("Quantity can't be blank")
+    end
+  end
 end
