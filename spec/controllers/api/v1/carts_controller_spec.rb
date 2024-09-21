@@ -38,4 +38,20 @@ RSpec.describe Api::V1::CartsController, type: :controller do
       expect(json_response['errors']).to include("Quantity can't be blank")
     end
   end
+
+  describe "PATCH/PUT #update" do
+    it "updates the cart's attributes" do
+      put :update, params: { id: cart.id, cart: { quantity: 5 } }
+      expect(response).to be_successful
+      cart.reload
+      expect(cart.quantity).to eq(5)
+    end
+
+    it "returns an error when update fails" do
+      put :update, params: { id: cart.id, cart: { quantity: nil } }
+      expect(response).to have_http_status(:unprocessable_entity)
+      json_response = JSON.parse(response.body)
+      expect(json_response['quantity']).to include("can't be blank")
+    end
+  end
 end
