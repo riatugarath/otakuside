@@ -54,4 +54,20 @@ RSpec.describe Api::V1::CartsController, type: :controller do
       expect(json_response['quantity']).to include("can't be blank")
     end
   end
+
+  describe "DELETE #destroy" do
+    it "deletes the cart" do
+      expect {
+        delete :destroy, params: { id: cart.id }
+      }.to change(Cart, :count).by(-1)
+
+      expect(response).to have_http_status(:no_content)
+    end
+
+    it "returns an error if deletion fails" do
+      allow_any_instance_of(Cart).to receive(:destroy).and_return(false)
+      delete :destroy, params: { id: cart.id }
+      expect(response).to have_http_status(:unprocessable_entity)
+    end
+  end
 end
