@@ -56,4 +56,21 @@ RSpec.describe Api::V1::DiscountsController, type: :controller do
     end
   end
 
+  describe 'DELETE #destroy' do
+	let!(:discount) { create(:discount) } # Create a discount
+
+	it 'deletes the discount and returns a success response' do
+      expect {
+	    delete :destroy, params: { id: discount.id }
+	  }.to change(Discount, :count).by(-1)
+	    
+	  expect(response).to have_http_status(:no_content)
+	end
+
+	it 'returns an error if the discount does not exist' do
+	  delete :destroy, params: { id: -1 } # Delete a disconut with no valid ID
+	  expect(response).to have_http_status(:not_found)
+	  expect(JSON.parse(response.body)['error']).to eq('Discount not found')
+	end
+  end
 end

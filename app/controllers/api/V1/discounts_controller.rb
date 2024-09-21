@@ -31,8 +31,13 @@ class Api::V1::DiscountsController < ApplicationController
   end
   
   def destroy
-    @discount = Discount.find(params[:id])
-    render json: @discount
+    @discount = Discount.find_by(id: params[:id])
+    if @discount
+      @discount.destroy
+      head :no_content
+    else
+      render json: { error: 'Discount not found' }, status: :not_found
+    end
   end
   
   private
