@@ -1,17 +1,17 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::CartsController, type: :controller do
-  include Devise::Test::ControllerHelpers  # Include Devise helpers
+  include Devise::Test::ControllerHelpers # Include Devise helpers
   let!(:user) { create(:user) }
   let!(:product) { create(:product) }
   let!(:cart) { create(:cart, user: user, product: product) }
 
   before do
-    sign_in user  # Simulate user login
+    sign_in user # Simulate user login
   end
 
-  describe "GET #index" do
-    it "returns a success response with all carts for a user" do
+  describe 'GET #index' do
+    it 'returns a success response with all carts for a user' do
       get :index, params: { user_id: user.id }
       expect(response).to be_successful
       json_response = JSON.parse(response.body)
@@ -20,18 +20,18 @@ RSpec.describe Api::V1::CartsController, type: :controller do
     end
   end
 
-  describe "POST #create" do
-    it "creates a new cart for the user" do
-      expect {
+  describe 'POST #create' do
+    it 'creates a new cart for the user' do
+      expect do
         post :create, params: { cart: { quantity: 2, user_id: user.id, product_id: product.id, size: 'M' } }
-      }.to change(Cart, :count).by(1)
+      end.to change(Cart, :count).by(1)
 
       expect(response).to have_http_status(:created)
       json_response = JSON.parse(response.body)
       expect(json_response['quantity']).to eq(2)
     end
 
-    it "returns an error when creation fails" do
+    it 'returns an error when creation fails' do
       post :create, params: { cart: { quantity: nil, user_id: user.id, product_id: product.id, size: 'M' } }
       expect(response).to have_http_status(:unprocessable_entity)
       json_response = JSON.parse(response.body)
@@ -39,7 +39,7 @@ RSpec.describe Api::V1::CartsController, type: :controller do
     end
   end
 
-  describe "PATCH/PUT #update" do
+  describe 'PATCH/PUT #update' do
     it "updates the cart's attributes" do
       put :update, params: { id: cart.id, cart: { quantity: 5 } }
       expect(response).to be_successful
@@ -47,7 +47,7 @@ RSpec.describe Api::V1::CartsController, type: :controller do
       expect(cart.quantity).to eq(5)
     end
 
-    it "returns an error when update fails" do
+    it 'returns an error when update fails' do
       put :update, params: { id: cart.id, cart: { quantity: nil } }
       expect(response).to have_http_status(:unprocessable_entity)
       json_response = JSON.parse(response.body)
@@ -55,16 +55,16 @@ RSpec.describe Api::V1::CartsController, type: :controller do
     end
   end
 
-  describe "DELETE #destroy" do
-    it "deletes the cart" do
-      expect {
+  describe 'DELETE #destroy' do
+    it 'deletes the cart' do
+      expect do
         delete :destroy, params: { id: cart.id }
-      }.to change(Cart, :count).by(-1)
+      end.to change(Cart, :count).by(-1)
 
       expect(response).to have_http_status(:no_content)
     end
 
-    it "returns an error if deletion fails" do
+    it 'returns an error if deletion fails' do
       allow_any_instance_of(Cart).to receive(:destroy).and_return(false)
       delete :destroy, params: { id: cart.id }
       expect(response).to have_http_status(:unprocessable_entity)

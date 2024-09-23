@@ -14,9 +14,9 @@ RSpec.describe Cart, type: :model do
 
     # Validate the quantity is a integer and >= 1
     it do
-      should validate_numericality_of(:quantity).
-        is_greater_than_or_equal_to(1).
-        only_integer
+      should validate_numericality_of(:quantity)
+        .is_greater_than_or_equal_to(1)
+        .only_integer
     end
 
     # Validate the cart has an user

@@ -3,7 +3,7 @@ class Api::V1::DiscountsController < ApplicationController
     @discounts = Discount.all
     render json: @discounts
   end
-  
+
   def show
     @discount = Discount.find_by(id: params[:id])
     if @discount
@@ -12,7 +12,7 @@ class Api::V1::DiscountsController < ApplicationController
       render json: { error: 'Discount not found' }, status: :not_found
     end
   end
-  
+
   def create
     @discount = Discount.new(discount_params)
     if @discount.save
@@ -21,7 +21,7 @@ class Api::V1::DiscountsController < ApplicationController
       render json: { error: 'Failed to create discount data' }, status: :unprocessable_entity
     end
   end
-  
+
   def update
     if @discount.update(discount_params)
       render json: @discount, status: :ok
@@ -29,7 +29,7 @@ class Api::V1::DiscountsController < ApplicationController
       render json: { errors: @discount.errors.full_messages }, status: :unprocessable_entity
     end
   end
-  
+
   def destroy
     @discount = Discount.find_by(id: params[:id])
     if @discount
@@ -39,9 +39,9 @@ class Api::V1::DiscountsController < ApplicationController
       render json: { error: 'Discount not found' }, status: :not_found
     end
   end
-  
+
   private
-  
+
   def discount_params
     params.require(:discount).permit(:name, :image, :current_price, :offer_price, :normal_price, :percentage, :category)
   end
