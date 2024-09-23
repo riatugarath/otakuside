@@ -1,8 +1,8 @@
-	require 'rails_helper'
+require 'rails_helper'
 
-	RSpec.describe Api::V1::LandingsController, type: :controller do
-	  include Devise::Test::ControllerHelpers
-	  let!(:landing) { create(:landing) } # Create a landing using FactoryBot
+RSpec.describe Api::V1::LandingsController, type: :controller do
+  include Devise::Test::ControllerHelpers
+  let!(:landing) { create(:landing) } # Create a landing using FactoryBot
 
   describe 'GET #index' do
     it 'returns a success response with all landings' do
@@ -51,20 +51,20 @@
   describe 'DELETE #destroy' do
     context 'when the landing exists' do
       it 'deletes the landing and returns a success response' do
-        expect {
+        expect do
           delete :destroy, params: { id: landing.id }
-        }.to change(Landing, :count).by(-1)
+        end.to change(Landing, :count).by(-1)
         expect(response).to have_http_status(:ok)
         expect(JSON.parse(response.body)['message']).to eq('Landing successfully deleted')
       end
     end
 
     context 'when the landing does not exist' do
-	  it 'returns an error response' do
-	    delete :destroy, params: { id: -1 } # ID does not exist
-	    expect(response).to have_http_status(:not_found)
-	    expect(JSON.parse(response.body)['error']).to eq('Landing not found')
-	  end
-	end
+      it 'returns an error response' do
+        delete :destroy, params: { id: -1 } # ID does not exist
+        expect(response).to have_http_status(:not_found)
+        expect(JSON.parse(response.body)['error']).to eq('Landing not found')
+      end
+    end
   end
 end

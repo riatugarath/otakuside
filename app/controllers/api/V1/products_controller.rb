@@ -31,8 +31,13 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
-    render json: @product
+    @product = Product.find_by(id: params[:id])
+    if @product
+      @product.destroy
+      render json: { message: 'Product deleted successfully' }, status: :ok
+    else
+      render json: { error: 'Product not found' }, status: :not_found
+    end
   end
 
   private
