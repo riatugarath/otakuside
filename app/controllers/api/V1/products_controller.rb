@@ -9,7 +9,7 @@ class Api::V1::ProductsController < ApplicationController
     if @product
       render json: @product, status: :ok
     else
-      render json: { error: 'Prouct not found' }, status: :not_found
+      render json: { error: 'Product not found' }, status: :not_found
     end
   end
 
