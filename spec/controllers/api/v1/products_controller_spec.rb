@@ -26,4 +26,22 @@ RSpec.describe Api::V1::ProductsController, type: :controller do
       expect(JSON.parse(response.body)['error']).to eq('Product not found')
     end
   end
+
+  describe 'POST #create' do
+    context 'with valid parameters' do
+      it 'creates a new product and returns a success response' do
+        post :create, params: { product: { name: 'New Product', image: 'image_url', category: 'Tech', ori_price: 100, sale_price: 80, description: 'New product description' } }
+        expect(response).to have_http_status(:created)
+        expect(JSON.parse(response.body)['name']).to eq('New Product')
+      end
+    end
+
+    context 'with invalid parameters' do
+      it 'returns an error response when product creation fails' do
+        post :create, params: { product: { name: nil } }  # Parámetros inválidos
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(JSON.parse(response.body)['error']).to eq('Failed to create product data')
+      end
+    end
+  end
 end
