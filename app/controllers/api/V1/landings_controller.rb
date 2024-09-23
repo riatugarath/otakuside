@@ -37,7 +37,7 @@ class Api::V1::LandingsController < ApplicationController
 
   private
 
-  def product_params
-    params.require(:landing).permit(:name, :image, :category)
+  def landing_params
+    params.require(:landing).permit(:name, :image, :category, :offer)
   end
 end

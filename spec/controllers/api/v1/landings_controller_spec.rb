@@ -1,8 +1,8 @@
-require 'rails_helper'
+	require 'rails_helper'
 
-RSpec.describe Api::V1::LandingsController, type: :controller do
-  include Devise::Test::ControllerHelpers
-  let!(:landing) { create(:landing) } # Create a landing using FactoryBot
+	RSpec.describe Api::V1::LandingsController, type: :controller do
+	  include Devise::Test::ControllerHelpers
+	  let!(:landing) { create(:landing) } # Create a landing using FactoryBot
 
   describe 'GET #index' do
     it 'returns a success response with all landings' do
@@ -23,9 +23,27 @@ RSpec.describe Api::V1::LandingsController, type: :controller do
 
     context 'when the landing does not exist' do
       it 'returns an error response' do
-        get :show, params: { id: -1 } # Un ID que no existe
+        get :show, params: { id: -1 } # wrong ID
         expect(response).to have_http_status(:not_found)
         expect(JSON.parse(response.body)['error']).to eq('Landing not found')
+      end
+    end
+  end
+
+  describe 'POST #create' do
+    context 'with valid parameters' do
+      it 'creates a new landing and returns a success response' do
+        post :create, params: { landing: { name: 'New Landing', image: 'image_url', category: 'Tech', offer: 10 } }
+        expect(response).to have_http_status(:created)
+        expect(JSON.parse(response.body)['name']).to eq('New Landing')
+      end
+    end
+
+    context 'with invalid parameters' do
+      it 'returns an error response' do
+        post :create, params: { landing: { name: nil } } # no valid parameters
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(JSON.parse(response.body)['error']).to eq('Failed to create landing data')
       end
     end
   end
