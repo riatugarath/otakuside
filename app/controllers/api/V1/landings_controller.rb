@@ -31,8 +31,13 @@ class Api::V1::LandingsController < ApplicationController
   end
 
   def destroy
-    @landing = Landing.find(params[:id])
-    render json: @landing
+    @landing = Landing.find_by(id: params[:id])
+    if @landing
+      @landing.destroy
+      render json: { message: 'Landing successfully deleted' }, status: :ok
+    else
+      render json: { error: 'Landing not found' }, status: :not_found
+    end
   end
 
   private
