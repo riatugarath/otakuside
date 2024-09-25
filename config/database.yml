@@ -84,3 +84,4 @@ production:
   database: otakukaio_production
   username: otakukaio
   password: <%= ENV["otakukaio"] %>
+  url: <%= ENV['DATABASE_URL'] %>
